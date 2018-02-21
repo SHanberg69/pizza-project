@@ -23,6 +23,11 @@ h3{
 	margin-top: 0;
 	font-size:30px;
 }
+h5{
+	color:#cc0000;
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -57,26 +62,45 @@ li a:hover {
 	height: 85%;
 	background-color: #fff;
 	opacity: 0.6;
-
 	}
+/*  I have tried numerous things to get the reciept to come up and stick to the right, but as soon as I added input for the "form" it moved down.  Below are the most recent things I ried, that worked at one time.*/
 
 .receipt{
 	position:relative;
 	float:right;
 	width: 25%;
-	height: 90%;
+	height: 80%;
 	background-color: #fff;
 	opacity: 0.9;
-	z-index:500;
+	z-index:9999;
+    color: #009900;
+
 }
+
 .menu{
+    display: flex;
 	color:#ff0000;
 	position:absolute;
 	margin-top: 3%;
-	margin-left:5%;
-	
+	margin-left:5%;	
+    flex-direction:column;
 }
 
+/*  I cannot get the form to make three columns on the menu.  I have been reading about flex box, ut the thinkgs I have tried are not working.*/
+
+
+form{
+    background-color:#fff;
+    width: 15%;
+	height: 70%;
+	position: relative;
+	padding: 1%;
+	margin:6%;
+	top:5px;
+	left:5px;    
+    flex-direction: row
+
+}
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
