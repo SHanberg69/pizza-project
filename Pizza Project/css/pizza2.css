@@ -63,44 +63,69 @@ li a:hover {
 	background-color: #fff;
 	opacity: 0.6;
 	}
-/*  I have tried numerous things to get the reciept to come up and stick to the right, but as soon as I added input for the "form" it moved down.  Below are the most recent things I ried, that worked at one time.*/
 
-.receipt{
+.cart{
 	position:relative;
 	float:right;
+    margin-top: 5px;
 	width: 25%;
-	height: 80%;
+	height: 75%;
 	background-color: #fff;
 	opacity: 0.9;
-	z-index:9999;
     color: #009900;
+
 
 }
 
 .menu{
     display: flex;
 	color:#ff0000;
-	position:absolute;
+	position:sticky;
 	margin-top: 3%;
 	margin-left:5%;	
-    flex-direction:column;
+    align-content:center;
 }
-
-/*  I cannot get the form to make three columns on the menu.  I have been reading about flex box, ut the thinkgs I have tried are not working.*/
 
 
 form{
     background-color:#fff;
     width: 15%;
 	height: 70%;
-	position: relative;
+	position:relative;
 	padding: 1%;
-	margin:6%;
-	top:5px;
-	left:5px;    
-    flex-direction: row
-
+	margin:1% 1% 1% 5%;
+    display:inline-table;
 }
+
+
+.overlay2{
+	position:fixed;
+	margin-top: 2%;
+	margin-left:2%;
+	width: 96%;
+	height: 85%;
+	background-color: #fff;
+	opacity: 0.6;
+    align-content: center;
+
+	}
+
+
+.title{
+    position:relative;
+    color: darkgreen;
+    font-style: italic;
+    display: block;
+    margin-top: 10%;
+    margin-left:45%;
+}
+
+.picture{
+    position:relative;
+    display: block;
+    margin-left: 55%;
+}
+
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap

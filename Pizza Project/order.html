@@ -33,28 +33,44 @@
 
 	<h5 > Choose your size:</h5>
         <table id="portion"></table>
-	<input type="radio" name="size" value="personal" cost="$6.00" onclick= "valueAndCost()">Personal--$6.00<br>
-	<input type="radio" name="size" value="medium"onclick="valueAndCost()" >Medium--$10.00<br>
-	<input type="radio" name="size" value="large" onclick="valueAndCost()" > Large--$14.00<br>
-	<input type="radio" name="size" value="xlarge" onclick="valueAndCost()" > X-tra Large--$16.00<br>
-        
-   <!--- I want to have whatever is marked in the radio button to appear on the receipt? Should I give each pizza a "cost="?  Did I id the table correctly?  And I put it in my function-- but I need help writing my function(see below).  How do I get my input to appear on the receipt?  I read the document.write was only to test things out.
+            <input type="radio" name="size" value="personal" onclick= "valueAndCost()">Personal--$6.00<br>
+            <input type="radio" name="size" value="medium"onclick="valueAndCost()" >Medium--$10.00<br>
+            <input type="radio" name="size" value="large" onclick="valueAndCost()" > Large--$14.00<br>
+            <input type="radio" name="size" value="xlarge" onclick="valueAndCost()" > X-tra Large--$16.00<br><br>
 
-I think when I write the function for veggies and meat that will say something like identifying input (i=0 ) If i>1 then add $3 for each number past i.  But I know this is not written correctly.
+<script>	
+function valueAndCost() {
+	select = "<h3>You Ordered:</h3>";   
+	price = "<h3> Item Price: </h3>"; 
+	var runningTotal = 0;
+	var sizeTotal = 0;
+	var sizeArray = document.getElementsByClassName("size");
+	for (var i = 0; i < sizeArray.length; i++) {
+		if (sizeArray[i].checked) {
+			var selectedSize = sizeArray[i].value;
+			select = select+selectedSize+"<br>";
+		}
+	}
+	if (selectedSize === "personal") {
+		sizeTotal = 6;	
+	} else if (selectedSize === "medium") {
+		sizeTotal = 10;
+	} else if (selectedSize === "large") {
+		sizeTotal = 14;
+	} else if (selectedSize === "xlarge") {
+		sizeTotal = 16;
+	}
+	price = price+sizeTotal+"<br>";
+	runningTotal = sizeTotal;
+	getMeat(runningTotal,select,price); 
 
-Then I need to get it to total...-->
+document.getElementById("portion").innerHTML=select;
+	document.getElementById("ItemPrice").innerHTML=price;
+	document.getElementById("Total").innerHTML = "<br><h3></br> Total Price:$"+runningTotal+".00"+"</h3>";
+};
 
-
-<script>
-    function valueAndCost() 
-    {
-    return "value", "cost";
-    }
-    document.getElementById("portion").innerHTML.receipt = "value"+ "   "+ "cost";
-</script>  
-        
-        
-
+        </script>       
+  
 	<h5 > Choose your crust:</h5>
 	<input type="radio" name="crust" value="plain" checked>Plain<br>
 	<input type="radio" name="crust" value="garlic">Garlic Butter<br>
@@ -62,6 +78,7 @@ Then I need to get it to total...-->
 	<input type="radio" name="crust" value="spicy">Spicy<br>
 	<input type="radio" name="crust" value="house">House Special<br>
 	<br>
+    <br>
 	
 	<h5>Choose the amount of cheese:</h5>
 	<input type="radio" name="cheese" value="with"checked>Regular<br>
@@ -86,7 +103,7 @@ Then I need to get it to total...-->
 	<input type="radio" name="mushrooms" value="marinara">Mushrooms<br>
 	<input type="radio" name="pineapple" value="white">Pineapple<br>
 	<input type="radio" name="spinach" value="bbq">Spinach<br>
-	<input type="radio" name="jalepeno" value="none">Jalepeno<br>
+	<input type="radio" name="jalepeno" value="none">Jalepeno<br><br>
 	</form>
 	
 	<form>
@@ -104,8 +121,15 @@ Then I need to get it to total...-->
 
 
 
-<div class="receipt" >
-        <h3>Pizza Planet Order!</h3>
+<div class="cart" >
+    <h3>Pizza Planet Order!</h3>
+        <input id="btnOrder" type="button" onclick="valueAndCost()" value ="Place Order">
+
+            <div id="cart">
+            <div id="Items"> </div>
+            <div id="ItemPrice"> </div>
+            <div id="Total">  </div>
+    </div>
         
 </div>
 <!-- /overlay-->
