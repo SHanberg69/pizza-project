@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet"  href="./css/pizza2.css">
 		<meta charset="UTF-8">
-        <script>"./js/pizza.js"</script>
+        <script> src="./js/pizzajava.js"</script>
 		<title>pizza planet ordering</title>
 	</head>
 
@@ -33,10 +33,10 @@
 
 	<h5 > Choose your size:</h5>
         <table id="portion"></table>
-            <input type="radio" class="size" value="personal" onclick= "valueAndCost()">Personal--$6.00<br>
-            <input type="radio" name="size" value="medium"onclick="valueAndCost()" >Medium--$10.00<br>
-            <input type="radio" name="size" value="large" onclick="valueAndCost()" > Large--$14.00<br>
-            <input type="radio" name="size" value="xlarge" onclick="valueAndCost()" > X-tra Large--$16.00<br><br>
+            <input type="radio" name="size" value="Personal" >Personal--$6.00<br>
+            <input type="radio" name="size" value="Medium">Medium--$10.00<br>
+            <input type="radio" name ="size" value="Large" >Large--$14.00<br>
+            <input type="radio" name="size" value="Xlarge"  checked >X-tra Large--$16.00<br><br>
 
 
   
@@ -92,7 +92,7 @@
 
 <div class="basket" >
     <h3>Pizza Planet Order!</h3>
-        <input id="btnOrder" type="button" onclick="valueAndCost()" value ="Place Order">
+        <input id="btnOrder" type="button" onclick="getReceipt()" value ="Place Order">
 
             <div id="cart">
             <div id="portion"> </div>
