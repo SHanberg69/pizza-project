@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet"  href="./css/pizza2.css">
 		<meta charset="UTF-8">
-        <script> src="./js/pizzajava.js"</script>
+        <script src="./js/pizzajava.js"></script>
 		<title>pizza planet ordering</title>
 	</head>
 
@@ -32,58 +32,56 @@
 	<form>
 
 	<h5 > Choose your size:</h5>
-        <table id="portion"></table>
-            <input type="radio" name="size" value="Personal" >Personal--$6.00<br>
-            <input type="radio" name="size" value="Medium">Medium--$10.00<br>
-            <input type="radio" name ="size" value="Large" >Large--$14.00<br>
-            <input type="radio" name="size" value="Xlarge"  checked >X-tra Large--$16.00<br><br>
+            <input class=size type="radio" name="size" value="Personal Pizza" >Personal--$6.00<br>
+            <input class=size type="radio" name="size" value="Medium Pizza">Medium--$10.00<br>
+            <input class=size type="radio" name ="size" value="Large Pizza" >Large--$14.00<br>
+            <input class=size type="radio" name="size" value="X-tra Large Pizza" checked >X-tra Large--$16.00<br><br>
 
 
   
 	<h5 > Choose your crust:</h5>
-	<input type="radio" name="crust" value="plain" checked>Plain<br>
-	<input type="radio" name="crust" value="garlic">Garlic Butter<br>
-	<input type="radio" name="crust" value="cheese">Cheese Stuffed (+$3.00)<br>
-	<input type="radio" name="crust" value="spicy">Spicy<br>
-	<input type="radio" name="crust" value="house">House Special<br>
-	<br>
-    <br>
+            <input class= "crust" type="radio" name="crust" value="Plain Crust" checked>Plain<br>
+            <input class= "crust" type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter<br>
+            <input class= "crust" type="radio" name="crust" value="Cheese Stuffed Crust">Cheese Stuffed (+$3.00)<br>
+            <input class= "crust" type="radio" name="crust" value="Spicy Crust">Spicy<br>
+            <input class= "crust" type="radio" name="crust" value="House Crust">House Special<br>
+        <br>
+        <br>
 	
 	<h5>Choose the amount of cheese:</h5>
-	<input type="radio" name="cheese" value="with"checked>Regular<br>
-	<input type="radio" name="cheese" value="without">No Cheese<br>
-	<input type="radio" name="cheese" value="3">Extra Cheese (+$3.00)<br>
+            <input class="dairy" type="radio" name="cheese" value="With Cheese"checked>Regular<br>
+            <input class="dairy"  type="radio" name="cheese" value="Without Cheese">No Cheese<br>
+            <input class="dairy"  type="radio" name="cheese" value="Extra Cheese">Extra Cheese (+$3.00)<br>
         </form> 
 	
 	<form>
 	<h5 >Choose your sauce:</h5>
-        <table id="toppings"></table>
-	<input type="radio" name="sauce" value="marinara" checked>Marinara<br>
-	<input type="radio" name="sauce" value="white">White Sauce<br>
-	<input type="radio" name="sauce" value="bbq">BBQ Sauce<br>
-	<input type="radio" name="sauce" value="none">No Sauce<br>
+            <input class="sauce" type="radio" name="juice" value="Marinara Sauce" checked>Marinara<br>
+            <input class="sauce" type="radio" name="juice"value="White Sauce">White Sauce<br>
+            <input class="sauce" type="radio" name="juice"value="BBQ Sauce">BBQ Sauce<br>
+            <input class="sauce" type="radio" name="juice" value="No Sauce">No Sauce<br>
 	
 	<h5>Choose your veggies:</h5>
 	<h5>One free. $1 for each additional</h5> 
-	<input type="checkbox" name="tomatoes" value="marinara">Tomatoes<br>
-	<input type="checkbox" name="onions" value="white">Onions<br>
-	<input type="checkbox" name="olives" value="bbq">Olives<br>
-	<input type="checkbox" name="grpeppers" value="none">Green Peppers<br>
-	<input type="checkbox" name="mushrooms" value="marinara">Mushrooms<br>
-	<input type="checkbox" name="pineapple" value="white">Pineapple<br>
-	<input type="checkbox" name="spinach" value="bbq">Spinach<br>
-	<input type="checkbox" name="jalepeno" value="none">Jalepeno<br><br>
+            <input class="veggies" type="checkbox" name="Tomatoes" value="Tomatoes">Tomatoes<br>
+            <input class="veggies" type="checkbox" name="Onions" value="Onions">Onions<br>
+            <input class="veggies" type="checkbox" name="Olives" value="Olives">Olives<br>
+            <input class="veggies" type="checkbox" name="GrPeppers" value="GrPeppers">Green Peppers<br>
+            <input class="veggies" type="checkbox" name="Mushrooms" value="Mushrooms">Mushrooms<br>
+            <input class="veggies" type="checkbox" name="Pineapple" value="Pineapple">Pineapple<br>
+            <input class="veggies" type="checkbox" name="Spinach" value="Spinach">Spinach<br>
+            <input class="veggies" type="checkbox" name="Jalepeno" value="Jalepeno">Jalepeno<br><br>
 	</form>
 	
 	<form>
 	<h5>Choose your protein:</h5>
 	<h5>One free. $1 for each additional</h5> 
-	<input type="checkbox" name="pepperoni" value="marinara">Pepperoni<br>
-	<input type="checkbox" name="sausage" value="white">Sausage<br>
-	<input type="checkbox" name="canadian" value="bbq">Canadian Bacon<br>
-	<input type="checkbox" name="grbeef" value="none">Ground Beef<br>
-	<input type="checkbox" name="anchovy" value="marinara">Anchovy<br>
-	<input type="checkbox" name="chicken" value="white">Chicken<br>
+            <input class="meats" type="checkbox" name="pepperoni" value="Pepperoni">Pepperoni<br>
+            <input class="meats" type="checkbox" name="sausage" value="Sausage">Sausage<br>
+            <input class="meats" type="checkbox" name="canadian" value="Canadian Bacon">Canadian Bacon<br>
+            <input class="meats" type="checkbox" name="grbeef" value="Ground eef">Ground Beef<br>
+            <input class="meats" type="checkbox" name="anchovy" value="Anchovy">Anchovy<br>
+            <input class="meats" type="checkbox" name="chicken" value="Chicken">Chicken<br>
 	</form> 
 
 	
@@ -92,13 +90,13 @@
 
 <div class="basket" >
     <h3>Pizza Planet Order!</h3>
-        <input id="btnOrder" type="button" onclick="getReceipt()" value ="Place Order">
-
-            <div id="cart">
+        
+            <div id="cart"> </div>
             <div id="portion"> </div>
             <div id="ItemPrice"> </div>
             <div id="Total">  </div>
-    </div>
+    <input id="btnOrder" type="button" onclick="getReceipt()" value ="Place Order">
+ 
         
 </div>
 <!-- /overlay-->
