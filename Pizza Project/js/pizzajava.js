@@ -85,16 +85,12 @@ if (selectedSauce === "Marinara Sauce") {
 	sauceTotal = 0;
 } else if (selectedSauce === "No Sauce") {
 	sauceTotal = 0;
-} 
+     
+}
   
- 
-    
-/* I have plugged in the code from the tutorial help.  Reading the outline with it, it sounds as though I don't need to make an else ifstatement that runs through the meat choices.  I have checked that my tags match and that I undestand the code.  The only thing I found is this issue:
-document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
 
-I don'tsee an id called just "totalPrice" but when I fix it-- it still doesn't work. So I must be missing something.  It still doesn't list checked meats */
     
-function getMeat(runningTotal,text1) {
+function getMeat(runningTotal, text1) {
 	var meatTotal = 0;
 	var selectedMeat = [];
 	var meatArray = document.getElementsByClassName("meats");
@@ -106,36 +102,28 @@ function getMeat(runningTotal,text1) {
 			text1 = text1+meatArray[j].value+"<br>";
 		}
 	}
+
+    
+    
 	var meatCount = selectedMeat.length;
 	if (meatCount > 1) {
 		meatTotal = (meatCount - 1);
 	} else {
 		meatTotal = 0;
 	}
-	runningTotal = (runningTotal + meatTotal);
-	console.log("total selected meat items: "+meatCount);
-	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
-	console.log("meat text1: "+text1);
-	console.log("Purchase Total: "+"$"+runningTotal+".00");
-	document.getElementById("showText").innerHTML=text1;
-	document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+
 };		
 	
     
-
-    
-   /* If I activate below-- I can get a detailed receipt and total except for meat (I haven't donethe veggies yet.)
-
-    runningTotal = sizeTotal + doughTotal + dairyTotal + sauceTotal;
-	console.log(selectedSize+" = $"+sizeTotal+".00");
-    console.log(selectedCrust+" = $"+doughTotal+".00");
-	console.log("size text1: "+text1);
+    runningTotal = sizeTotal + doughTotal + dairyTotal + sauceTotal + meatTotal;
 	console.log("subtotal: $"+runningTotal+".00");
     document.getElementById("portion").innerHTML = text1;
 	document.getElementById("Total").innerHTML = "<br><h3></br> Total Price:$"+runningTotal+".00"+"</h3>";
     //getMeat(runningTotal,text1); // All three of these variables will be passed on to each function
 };
-	*/
+	
+   
+
    
 
 
