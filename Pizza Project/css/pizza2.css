@@ -65,7 +65,7 @@ li a:hover {
 	}
 
 .basket{
-	position:relative;
+
 	float:right;
     margin-top: 5px;
 	width: 25%;
@@ -73,14 +73,13 @@ li a:hover {
 	background-color: #fff;
 	opacity: 0.9;
     color: #009900;
-
-
+    
 }
 
 .menu{
     display: flex;
-	color:#ff0000;
-	position:sticky;
+    color:#ff0000;
+    position:sticky;
 	margin-top: 3%;
 	margin-left:5%;	
     align-content:center;

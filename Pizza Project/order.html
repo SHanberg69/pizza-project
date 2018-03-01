@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet"  href="./css/pizza2.css">
 		<meta charset="UTF-8">
-        <script src="./js/pizzajava.js"></script>
+        <script src="./js/pizzaplanet.js"></script>
 		<title>pizza planet ordering</title>
 	</head>
 
@@ -35,7 +35,7 @@
             <input class=size type="radio" name="size" value="Personal Pizza" >Personal--$6.00<br>
             <input class=size type="radio" name="size" value="Medium Pizza">Medium--$10.00<br>
             <input class=size type="radio" name ="size" value="Large Pizza" >Large--$14.00<br>
-            <input class=size type="radio" name="size" value="X-tra Large Pizza" checked >X-tra Large--$16.00<br><br>
+            <input class=size type="radio" name="size" value="Extra Large Pizza" checked >X-tra Large--$16.00<br><br>
 
 
   
@@ -49,9 +49,9 @@
         <br>
 	
 	<h5>Choose the amount of cheese:</h5>
-            <input class="dairy" type="radio" name="cheese" value="With Cheese"checked>Regular<br>
-            <input class="dairy"  type="radio" name="cheese" value="Without Cheese">No Cheese<br>
-            <input class="dairy"  type="radio" name="cheese" value="Extra Cheese">Extra Cheese (+$3.00)<br>
+            <input class="cheese" type="radio" name="cheese" value="With Cheese"checked>Regular<br>
+            <input class="cheese"  type="radio" name="cheese" value="Without Cheese">No Cheese<br>
+            <input class="cheese"  type="radio" name="cheese" value="Extra Cheese">Extra Cheese (+$3.00)<br>
         </form> 
 	
 	<form>
@@ -90,17 +90,19 @@
 
 <div class="basket" >
     <h3>Pizza Planet Order!</h3>
-        
+    <h4>Item<div id="showText1"></div></h4>
+    
+    <h4>Price <div id="showText2"></div></h4> 
             <div id="cart"> </div>
-            <div id="portion"> </div>
             <div id="ItemPrice"> </div>
-            <div id="showText"></div>
-            <div id="totalPrice">  </div>
-            <div id="Total"></div>
+           
+         
+            <div id="totalPrice2"></div>
     <input id="btnOrder" type="button" onclick="getReceipt()" value ="Place Order">
  
-        
-</div>
+          
+    </div>
+
 <!-- /overlay-->
     </body>
 </html>
